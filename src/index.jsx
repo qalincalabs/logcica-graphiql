@@ -19,5 +19,7 @@ const requestOptions = {
 const root = createRoot(document.getElementById("root"));
 root.render(<App />);
 
-// Wake API up
-fetch("https://crisp-ferret-7818.ddn.hasura.app/graphql", requestOptions);
+// Wake up API
+fetch("https://crisp-ferret-7818.ddn.hasura.app/graphql", requestOptions).then(
+  () => console.log("API awake")
+);
