@@ -4,6 +4,10 @@ import "./index.css";
 
 const myHeaders = new Headers();
 myHeaders.append("Content-Type", "application/json");
+myHeaders.append(
+  "Auth-Token",
+  "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJjbGFpbXMuand0Lmhhc3VyYS5pbyI6eyJ4LWhhc3VyYS1hbGxvd2VkLXJvbGVzIjpbInB1YmxpYyJdLCJ4LWhhc3VyYS1kZWZhdWx0LXJvbGUiOiJwdWJsaWMifSwiZXhwIjoxNzY3MjIyMDAwLCJpYXQiOjE3MDQwNjM2MDB9.1xPRKJYZFc6YEX7jCD88ucv5GlJhOCmOtIxOyHaccl8"
+);
 
 const graphql = JSON.stringify({
   query: "{\n  activities(limit: 1) {\n    name\n  }\n}",
